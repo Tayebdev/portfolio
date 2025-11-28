@@ -30,16 +30,10 @@ const About = () => {
 
                 <motion.div
                     variants={fadeUp}
-                    className="text-gray-600 dark:text-darkTextMuted leading-relaxed space-y-6 text-lg"
+                    className="text-gray-600 dark:text-darkTextMuted leading-relaxed space-y-6 text-lg text-left"
                 >
                     <p>
-                        I'm Boulekzazel Tayeb, a Full-Stack Mobile & Web Developer and AI Engineer with extensive experience designing and building intelligent, scalable, real-world solutions. I specialize in creating high-performance applications using Flutter, Node.js, React, Python, and modern cloud technologies, delivering seamless and robust user experiences.
-                    </p>
-                    <p>
-                        I thrive on solving complex technical challenges, whether it's developing real-time mobile apps, architecting scalable backend systems, or designing machine learning models for predictive analytics and intelligent insights.
-                    </p>
-                    <p>
-                        With a strong foundation in data engineering, AI, ML algorithms, and cloud-native systems, I combine technical expertise, creative problem-solving, and strategic thinking to lead projects from concept to production. My mission is to build solutions that are intelligent, efficient, and impactful, pushing the boundaries of technology.
+                        I'm Boulekzazel Tayeb, a Full-Stack Mobile & Web Developer and AI Engineer who builds intelligent, scalable applications using Flutter, Node.js, React, Python, and cloud technologies. I thrive on solving complex challenges from real-time mobile apps and scalable backend systems to machine learning models combining AI, data engineering, and cloud-native architecture to deliver efficient, impactful solutions from concept to production.
                     </p>
                 </motion.div>
 

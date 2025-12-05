@@ -9,7 +9,7 @@ const Projects = () => {
 
     return (
         <section id="projects" className="py-20 bg-[#0F1115]">
-            <div className="container mx-auto px-4 max-w-6xl">
+            <div className="container mx-auto px-4 max-w-6xl lg-desktop:max-w-7xl">
                 <div className="text-center mb-12">
                     <motion.h2
                         initial="hidden"
@@ -33,7 +33,7 @@ const Projects = () => {
 
                 <motion.div
                     layout
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    className="grid grid-cols-1 md:grid-cols-2 lg-desktop:grid-cols-3 gap-6 sm-desktop:gap-8"
                 >
                     <AnimatePresence>
                         {projects.slice(0, visibleProjects).map((project) => (

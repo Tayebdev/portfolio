@@ -35,7 +35,9 @@ const Hero = () => {
             <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-black/5 dark:to-black/20 pointer-events-none z-10"></div>
 
             <div className="container mx-auto max-w-[1400px] z-10">
-                <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg:gap-40 items-center">
+                {/* Responsive Grid: Stacks on mobile, Side-by-side on sm-desktop (1024px+) */}
+                {/* Reduced gap from gap-40 to gap-12/20 to prevent overlap on small desktops */}
+                <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-12 lg-desktop:gap-24 2xl-desktop:gap-40 items-center">
 
                     {/* Left Column: Content */}
                     <motion.div
@@ -44,15 +46,15 @@ const Hero = () => {
                         animate="visible"
                         className="space-y-6 text-left order-2 lg:order-1"
                     >
-                        {/* Title - Animated Heading */}
+                        {/* Title - Animated Heading - VERTICAL STACK */}
                         <motion.h1
                             variants={wordContainer}
                             initial="hidden"
                             animate="visible"
-                            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-tight flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-3"
+                            className="font-bold text-white leading-tight flex flex-col gap-2"
                         >
-                            {/* Line 1: "Hi, I'm" */}
-                            <div className="whitespace-nowrap">
+                            {/* Line 1: "Hi, I'm" - Single line */}
+                            <div className="whitespace-nowrap text-4xl lg:text-5xl lg-desktop:text-6xl xl-desktop:text-7xl">
                                 {["Hi,", "I'm"].map((word, i) => (
                                     <motion.span key={i} variants={wordSlideUp} className="inline-block mr-3">
                                         {word}
@@ -60,8 +62,11 @@ const Hero = () => {
                                 ))}
                             </div>
 
-                            {/* Line 2: Name with Glow Effect */}
-                            <motion.div variants={wordSlideUp} className="text-blue-500 relative whitespace-nowrap">
+                            {/* Line 2: Name - Stacked BELOW "Hi, I'm" */}
+                            <motion.div
+                                variants={wordSlideUp}
+                                className="text-blue-500 relative whitespace-nowrap text-4xl lg:text-5xl lg-desktop:text-6xl xl-desktop:text-7xl"
+                            >
                                 <motion.span
                                     variants={glowText}
                                     initial="initial"
@@ -142,8 +147,10 @@ const Hero = () => {
                             {/* Soft Subtle Shadow */}
                             <div className="absolute inset-0 bg-gradient-to-br from-gray-200/15 to-gray-300/15 dark:from-blue-500/5 dark:to-blue-500/5 rounded-full blur-2xl"></div>
 
-                            {/* Circular Image - Mobile: Slightly Enlarged (200px), Desktop: Enlarged (400-480px) */}
-                            <div className="relative w-48 h-48 md:w-52 md:h-52 lg:w-[400px] lg:h-[400px] xl:w-[480px] xl:h-[480px] rounded-full overflow-hidden shadow-lg border-4 border-white/5">
+                            {/* Circular Image - Fluid Sizing */}
+                            {/* 1024px: w-[320px], 1280px: w-[380px], 1440px: w-[440px] */}
+                            {/* Using clamp() to ensure it never gets too small or too big */}
+                            <div className="relative w-48 h-48 md:w-52 md:h-52 lg:w-[clamp(300px,30vw,480px)] lg:h-[clamp(300px,30vw,480px)] rounded-full overflow-hidden shadow-lg border-4 border-white/5">
                                 <img
                                     src="/profile.jpg"
                                     alt="Boulekzazel Tayeb"

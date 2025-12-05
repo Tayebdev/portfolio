@@ -48,7 +48,7 @@ const Navbar = () => {
                     }`}
             >
                 <div className="container mx-auto px-4 flex justify-between items-center max-w-[1200px]">
-                    <a href="#" className="text-2xl font-bold font-display tracking-tighter text-white z-50 relative">
+                    <a href="#" className="font-bold tracking-tight text-white z-50 relative whitespace-nowrap text-xl sm-desktop:text-2xl">
                         Boulekzazel Tayeb
                     </a>
 

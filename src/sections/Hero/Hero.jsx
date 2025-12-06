@@ -150,7 +150,7 @@ const Hero = () => {
                             {/* Circular Image - Fluid Sizing */}
                             {/* 1024px: w-[320px], 1280px: w-[380px], 1440px: w-[440px] */}
                             {/* Using clamp() to ensure it never gets too small or too big */}
-                            <div className="relative w-48 h-48 md:w-52 md:h-52 lg:w-[clamp(300px,30vw,480px)] lg:h-[clamp(300px,30vw,480px)] rounded-full overflow-hidden shadow-lg border-4 border-white/5">
+                            <div className="relative w-56 h-56 md:w-64 md:h-64 lg:w-[clamp(400px,35vw,600px)] lg:h-[clamp(400px,35vw,600px)] rounded-full overflow-hidden shadow-lg border-4 border-white/5">
                                 <img
                                     src="/profile.jpg"
                                     alt="Boulekzazel Tayeb"

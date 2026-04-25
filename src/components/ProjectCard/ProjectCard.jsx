@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
                 <motion.img
                     src={project.image}
                     alt={project.title}
-                    className={`w-full h-full ${['Transigo', 'Trendify', 'Blood Donation', 'Foodu', 'Barber Shop', 'PowerStack'].includes(project.title) ? 'object-contain p-1' : 'object-cover'}`}
+                    className={`w-full h-full ${['Transigo', 'Kwitely', 'Trendify', 'Blood Donation', 'Foodu', 'Barber Shop', 'PowerStack'].includes(project.title) ? 'object-contain p-1' : 'object-cover'}`}
                     variants={projectImageHover}
                     whileHover="hover"
                 />
@@ -69,23 +69,26 @@ const ProjectCard = ({ project }) => {
                     ))}
                 </div>
 
-                {project.title === 'Transigo' ? (
-                    <div className="mt-auto">
-                        <p className="text-xs text-gray-400 italic">
-
-                        </p>
-                    </div>
-                ) : (
-                    <motion.a
-                        href={project.link}
-                        className="inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:text-blue-600 dark:text-accentCyan dark:hover:text-accentCyan/80 mt-auto"
-                        initial="rest"
-                        whileHover="hover"
-                    >
-                        <Github size={18} />
-                        GitHub
-                    </motion.a>
-                )}
+                <motion.a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-blue-500 hover:text-blue-600 dark:text-accentCyan dark:hover:text-accentCyan/80 mt-auto"
+                    initial="rest"
+                    whileHover="hover"
+                >
+                    {project.link.includes('github.com') ? (
+                        <>
+                            <Github size={18} />
+                            GitHub
+                        </>
+                    ) : (
+                        <>
+                            <ExternalLink size={18} />
+                            Visit Website
+                        </>
+                    )}
+                </motion.a>
             </div>
         </motion.div>
     );

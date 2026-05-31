@@ -26,6 +26,7 @@ export const projects = [
       "Socket.io",
     ],
     link: "https://transigodz.com/",
+    playStore: "https://play.google.com/store/apps/details?id=com.transigodz.client",
   },
   {
     id: 2,

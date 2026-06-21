@@ -20,7 +20,7 @@ const ProjectCard = ({ project }) => {
                 <motion.img
                     src={project.image}
                     alt={project.title}
-                    className={`w-full h-full ${['Transigo', 'Kwitely', 'Trendify', 'Blood Donation', 'Foodu', 'Barber Shop', 'PowerStack'].includes(project.title) ? 'object-contain p-1' : 'object-cover'}`}
+                    className={`w-full h-full ${['Transigo', 'Kwitely', 'Kwitely Service', 'Trendify', 'Blood Donation', 'Foodu', 'Barber Shop', 'PowerStack'].includes(project.title) ? 'object-contain p-1' : 'object-cover'}`}
                     variants={projectImageHover}
                     whileHover="hover"
                 />

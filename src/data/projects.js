@@ -5,7 +5,7 @@ import FooduImage from "../assets/Foodu.png";
 import BarberImage from "../assets/baerber.png";
 import PowerStackImage from "../assets/PowerStack.png";
 import KwitelyImage from "../assets/Kwitely.png";
-import KwitelyServiceImage from "../assets/KwitelyService.png";
+import KwitelyServiceImage from "../assets/kwitelyService.png";
 
 export const projects = [
   {
